@@ -2,6 +2,10 @@
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
+      <label for="name">Id</label>
+      <input type="text" class="form-control" id="EnrollId" required [(ngModel)]="enrollee.id" name="Enrollid" readonly>
+    </div>
+    <div class="form-group">
       <label for="name">Name</label>
       <input type="text" class="form-control" id="Name" required [(ngModel)]="enrollee.name" name="Name">
     </div>
