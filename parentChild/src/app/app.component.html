@@ -1,0 +1,31 @@
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></head>
+<div class="container">
+  <h2>Basic Table</h2>
+  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+  <form>
+    <h1>Employees</h1>
+  <table class="table" border ='1'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Role</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let employee of employees'>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.age }}</td>
+        <td>{{ employee.address }}</td>
+        <td>{{ employee.role }}</td>
+        <td>{{ employee.salary }}</td>
+        <td> <button type="button" class="btn btn-primary" (click)="onSelectedEmployee(employee)">View</button></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+<app-app-child [employee]='currentEmployee'></app-app-child>
+</div>
